@@ -1,0 +1,272 @@
+
+/* Colour palette: https://coolors.co/292f36-4ecdc4-ffffff-ff6b6b-ffffff */
+
+/* Content styling */
+
+.search {
+    height: 120px;
+    width: 1000px;
+    position: fixed;
+    z-index: 1; /* on top */
+    top: 30px;
+    left: 225px;
+    overflow-x: hidden; /* disable scroll*/
+    overflow-y: hidden; /* disable scroll*/
+    padding: 0px 0px 0px 0px;
+    border: 1px solid #292f36;
+    border-radius: 4px;
+    background-image: url("/assets/img/search.png");
+    background-size: 100px;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.main {
+    height: auto;
+    width: 1000px;
+    position: fixed;
+    z-index: 1; /* on top */
+    top: 175px;
+    left: 225px;
+    background-color: #ffffff;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.read {
+    height: auto;
+    width: 1000px;
+    position: fixed;
+    z-index: 1; /* on top */
+    top: 30px;
+    left: 225px;
+    background-color: #ffffff;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 0px 0px 0px 0px;
+}
+
+.edit {
+    height: auto;
+    width: 1000px;
+    position: fixed;
+    z-index: 1; /* on top */
+    top: 30px;
+    left: 225px;
+    background-color: #ffffff;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid #292f36;
+}
+
+.content h1 {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;  
+}
+
+.content h4 {
+    text-decoration: none;
+    font-size: 15px;
+    color: #292f36;
+    display: block;
+}
+
+.content p {
+    font-size: 20px;
+    color: #000000;
+}
+
+.content a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #292f36;
+    display: inline;
+}
+
+.content a:hover {
+    color: #2d9f98;
+}
+
+.body {
+    white-space: pre-wrap;
+}
+
+/* Sidebar styling */
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1; /* on top */
+    bottom: 0;
+    left: 0;
+    background-color: #292f36;
+    overflow-x: hidden; /* disable scroll*/
+    overflow-y: hidden; /* disable scroll*/
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.sidebar h1 {
+    text-decoration: none;
+    font-size: 20px;
+    color: #2d9f98;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.sidebar h2 {
+    text-decoration: none;
+    font-size: 15px;
+    color: #ff6b6b;
+    display: block;
+}
+
+.sidebar p {
+    font-size: 15px;
+    color: #ffffff;
+    margin: 4px 0;
+}
+
+.sidebar a {
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #4ecdc4;
+}
+
+/* Form styling */
+
+label {
+    font-size: 15px;
+    color: #292f36;
+}
+
+.search-form {
+    width: 600px;
+    position: fixed;
+    margin-left: 80px;
+    z-index: 1; /* on top */
+    overflow-x: hidden; /* disable scroll*/
+    overflow-y: hidden; /* disable scroll*/
+    padding: 20px 20px 20px 20px;
+}
+
+.search-form label {
+    font-size: 15px;
+    color: #292f36;
+    display: block;
+}
+
+ .search-form input[type=text], select {
+    width: 50%;
+    height: 35px;
+    padding: 12px 20px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #292f36;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-form input[type=image] {
+    width: 35px;
+    height: 35px;
+    padding-top: 7px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #292f36;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    outline: none !important;
+    border: 1px solid #ff6b6b;
+}
+
+
+.form {
+    height: auto;
+    width: 1000px;
+    position: fixed;
+    z-index: 1; /* on top */
+    top: 30px;
+    left: 225px;
+    z-index: 1; /* on top */
+    background-color: #ffffff;
+    overflow-x: hidden; /* disable scroll*/
+    overflow-y: hidden; /* disable scroll*/
+    padding: 20px 20px 20px 20px;
+    border: 1px solid #292f36;
+    border-radius: 4px;
+}
+
+.form text, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #292f36;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.form text:focus {
+    outline: none !important;
+    border: 1px solid #ff6b6b;
+}
+
+.form textarea, select {
+    width: 100%;
+    resize: none;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #292f36;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.form textarea:focus {
+    outline: none !important;
+    border: 1px solid #ff6b6b;
+}
+
+.form input[type=submit] {
+    width: 100%;
+    background-color: #2d9f98;  
+    color: white;
+    font-size: 15px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form input[type=submit]:hover {
+    background-color: #4ecdc4;
+    color: #292f36;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <title>goWiki</title>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <img src="../assets/img/gopher.png" alt="gopher"/ height="30"><h1>goWiki</h1>
+            <p>An exploration into building web applications with GoLang.</p>
+            
+            <h2>Navigation</h2>
+            <a href="/" target="content_frame">goWiki home</a>
+            <a href="" target="content_frame">Search pages</a>
+            <a href="" target="content_frame">Publish new page</a>
+            <h2>User area</h2>
+            <a href="">Login</a>
+            <a href="">Create account</a>
+            <h2>Latest articles</h2>
+            {{ range .RecentList }}
+            <a href="/read/{{ .PageID }}">{{ .Title }}</a>
+            {{ end }}
+        </div>
+
+        <div class="form">
+            <div class="content">
+                <h1>Page Editor</h1>
+                <h4>You are editing page '{{ .ViewPage.Title }}'.  Originally authored by {{.ViewPage.AuthorName }} and published on {{.ViewPage.CreatedDate}}.
+            </div>
+            <form action="/save/{{ .ViewPage.PageID }}" method="POST">
+                <label for="title">Page Title:</label>
+                <textarea name="title" rows="1">{{ printf "%s" .ViewPage.Title }}</textarea>
+                <label for="body">Page Body:</label>
+                <textarea name="body" rows="25">{{ printf "%s" .ViewPage.Body }}</textarea>                   
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        </div>
+    </body>
+</html>

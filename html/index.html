@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/styles.css">
+         <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+ 
+        <title>goWiki</title>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <img src="../assets/img/gopher.png" alt="gopher"/ height="30"><h1>goWiki</h1>
+            <p>An exploration into building web applications with GoLang.</p>
+            
+            <h2>Navigation</h2>
+            <a href="/" target="content_frame">goWiki home</a>
+            <a href="" target="content_frame">Search pages</a>
+            <a href="" target="content_frame">Publish new page</a>
+            <h2>User area</h2>
+            <a href="">Login</a>
+            <a href="">Create account</a>
+            <h2>Latest articles</h2>
+            {{ range .RecentList }}
+            <a href="/read/{{ .PageID }}">{{ .Title }}</a>
+            {{ end }}
+        </div>
+        
+        <div class="search">
+                <div class="search-form">
+                    <form action="" method="POST">
+                        <label for="search-string">goWiki quick search:</label>
+                        <input type="text" name="search-string"></input>
+                        <input type="image" src="../assets/img/search_icon.png"></input>
+                    </form>
+                </div>
+        </div>
+
+        <div class="main">
+            <div class="content">
+                <h1>{{.ViewPage.Title}}</h1>
+                <h4>Page Reference: {{ .ViewPage.PageID }} | Authored By: {{.ViewPage.AuthorName}} | Published On: {{.ViewPage.CreatedDate}}</h4>
+                <div class="body">{{ printf "%s" .ViewPage.Body }}</div> 
+            </div>
+        </div>
+    </body>
+</html>
